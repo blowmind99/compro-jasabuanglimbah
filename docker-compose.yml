@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  main:
+    container_name: polo-apps
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - 8042:8000
+
+networks:
+  laravel-exa:
+    driver: bridge
